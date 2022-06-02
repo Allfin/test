@@ -3,12 +3,24 @@ import { Navbar } from "react-bootstrap";
 const Header = () => {
   return (
     <div>
-      <Navbar className="px-2">
-        <Navbar.Brand href="#home">Navbar with text</Navbar.Brand>
+      <Navbar className="px-3">
+        <Navbar.Brand href="/" style={{ color: "#F24242" }}>
+          Shipper
+        </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
-            Signed in as: <a href="#login">Mark Otto</a>
+            Hello,{" "}
+            <a href="#login" style={{ color: "#F24242" }}>
+              Shipper User
+            </a>{" "}
+            <i
+              className="fa-solid fa-user"
+              style={{
+                color: "#A0A0A0",
+                fontSize: "1rem",
+              }}
+            ></i>
           </Navbar.Text>
         </Navbar.Collapse>
       </Navbar>

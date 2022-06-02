@@ -1,15 +1,28 @@
 import Header from "./Header";
 import SideNav from "./SideNav";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 const PageContainer = ({ children }) => {
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+
   return (
-    <div style={{ minHeight: "100vh", border: "20px solid black" }}>
+    <div style={{ minHeight: "100vh" }}>
       <Header />
       <div className="d-flex">
-        <div style={{ width: "15%", alignItems: "stretch" }}>
-          <SideNav />
-        </div>
-        <div style={{ width: "85%" }}>{children}</div>
+        {isDesktop ? (
+          <>
+            <div style={{ width: "15%", alignItems: "stretch" }}>
+              <SideNav />
+            </div>
+            <div style={{ width: "85%", backgroundColor: "#F3EAEA" }}>
+              {children}
+            </div>
+          </>
+        ) : (
+          <div style={{ backgroundColor: "#F3EAEA", minHeight: "100vh" }}>
+            {children}
+          </div>
+        )}
       </div>
     </div>
   );
