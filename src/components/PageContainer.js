@@ -11,10 +11,10 @@ const PageContainer = ({ children }) => {
       <div className="d-flex">
         {isDesktop ? (
           <>
-            <div style={{ width: "15%", alignItems: "stretch" }}>
+            <div style={{ width: "20%", alignItems: "stretch" }}>
               <SideNav />
             </div>
-            <div style={{ width: "85%", backgroundColor: "#F3EAEA" }}>
+            <div style={{ width: "80%", backgroundColor: "#F3EAEA" }}>
               {children}
             </div>
           </>
